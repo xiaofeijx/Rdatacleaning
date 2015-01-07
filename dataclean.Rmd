@@ -1,22 +1,36 @@
-
-#data.table========
-require(data.table)
+---
+title: "dataclean"
+author: "xiaofei"
+date: "Wednesday, January 07, 2015"
+output: html_document
+---
 
 # create a regular data.frame
+```{r}
+library(data.table)
 theDF <- data.frame(A=1:10,
                     B=letters[1:10],
                     C=LETTERS[11:20],
                     D=rep(c("One", "Two", "Three"), length.out=10))
+```
+
 # create a data.table
+```{r}
 theDT <- data.table(A=1:10,
                     B=letters[1:10],
                     C=LETTERS[11:20],
                     D=rep(c("One", "Two", "Three"), length.out=10))
-> # print them and compare
-theDF
+```
 
+# print them and compare
+```{r}
+theDF
 theDT
+```
 
 #data.frame默认会将字符型变量变成factor,而data.talbe不会
+```{r}
 class(theDF$B)
-class(TheDT$B)
+class(theDT$B)
+```
+
